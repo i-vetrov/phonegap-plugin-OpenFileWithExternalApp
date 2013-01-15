@@ -5,7 +5,7 @@
  * Copyright (c) Ivan Vetrau 2012
  */
 
-package com.phonegap.plugins.OpenFileWithExternalApp;
+package com.phonegap.plugins.openfilewithexternalapp;
 
 import java.io.File;
 
