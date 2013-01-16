@@ -25,14 +25,13 @@ public class OpenFileWithExternalApp extends Plugin {
 		
 		try {
 			
-			String fileName = args.getString(0);
-			
+			String filePath = args.getString(0);
+						
 			Intent intent = new Intent();
 			
 		    intent.setAction(android.content.Intent.ACTION_VIEW);
 		    
-			File fileToOpen = new File(Environment.getExternalStorageDirectory().getPath() 
-					+ "/download/" + fileName);
+			File fileToOpen = new File(filePath);
 			
 			MimeTypeMap mime = MimeTypeMap.getSingleton();
 			
