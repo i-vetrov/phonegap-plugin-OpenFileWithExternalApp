@@ -8,21 +8,21 @@
 var OpenFileWithExternalApp = function() {
 };
 
-OpenFileWithExternalApp.prototype.openFile = function(fileName, successCallback, errorCallback){
+OpenFileWithExternalApp.prototype.openFile = function(filePath, successCallback, errorCallback){
   
 	 if (errorCallback == null) { errorCallback = function() {}}
 
 	    if (typeof errorCallback != "function")  {
-	        console.log("Failure: failure parameter not a function");
+	        console.log("Opening failure: failure parameter not a function");
 	        return
 	    }
 
 	    if (typeof successCallback != "function") {
-	        console.log("Failure: success callback parameter must be a function");
+	        console.log("Opening failure: success callback parameter must be a function");
 	        return
 	    }
 
-	    cordova.exec(successCallback, errorCallback, 'OpenFileWithExternalApp', 'Open', [fileName]);
+	    cordova.exec(successCallback, errorCallback, 'OpenFileWithExternalApp', 'Open', [filePath]);
 }
 
 
