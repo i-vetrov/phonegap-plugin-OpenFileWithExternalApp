@@ -1,7 +1,7 @@
 phonegap-plugin-OpenFileWithExternalApp
 =======================================
 
-A plugin that opens file in external app using its extention.
+A plugin that opens file in external app using its extension.
 
 ## Adding the plugin to your project ##
 
