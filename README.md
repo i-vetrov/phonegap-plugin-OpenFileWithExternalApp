@@ -3,8 +3,6 @@ phonegap-plugin-OpenFileWithExternalApp
 
 A plugin that opens file in external app using its extention.
 
-ATTENTION: for now plugin opens only files in "download" folder.
-
 ## Adding the plugin to your project ##
 
 1. To install the plugin, move 'openfilewithexternalapp.js' to your project's www folder and include a reference to it in your html files. 
@@ -14,7 +12,15 @@ ATTENTION: for now plugin opens only files in "download" folder.
 
 ## Using the plugin ##
 
-The plugin creates the object 'window.plugins.OpenFileWithExternalApp' with method 'openFile(fileName)' where 'fileName' is the name of file in 'download' folder.
+The plugin creates the object 'window.plugins.openFileWithExternalApp' with method 'openFile(filePath, successCallback, errorCallback)' where 'filePath' is the absolute file path including the name of file. Usualy you can get filePath like this:
+    
+    fileEntry.file(function(file){
+    
+      window.plugins.openFileWithExternalApp.openFile(file.fullPath, successCallback, errorCallback);
+    
+    });
+
+
 The other method 'openLink(link)' open URL in external browser.
 
 Bug reports and your suggestions are welcome!
