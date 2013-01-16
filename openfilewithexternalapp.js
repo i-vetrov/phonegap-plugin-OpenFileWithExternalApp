@@ -33,6 +33,6 @@ OpenFileWithExternalApp.prototype.openLink = function(link){
 if(!window.plugins) {
     window.plugins = {};
 }
-if (!window.plugins.openExternalApp) {
-    window.plugins.openExternalApp = new OpenFileWithExternalApp();
+if (!window.plugins.openFileWithExternalApp) {
+    window.plugins.openFileWithExternalApp = new OpenFileWithExternalApp();
 }
