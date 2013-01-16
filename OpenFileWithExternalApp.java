@@ -29,7 +29,7 @@ public class OpenFileWithExternalApp extends Plugin {
 						
 			Intent intent = new Intent();
 			
-		    intent.setAction(android.content.Intent.ACTION_VIEW);
+		    	intent.setAction(android.content.Intent.ACTION_VIEW);
 		    
 			File fileToOpen = new File(filePath);
 			
